@@ -1,0 +1,42 @@
+.movies-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  color: #fff;
+  margin-bottom: 2.5rem;
+  background-color: #111;
+  padding: 1rem;
+}
+
+.movies-container div img {
+  max-width: 100%;
+}
+
+.movies-container div img,
+.movies-container div h2,
+.movies-container div p {
+  margin-bottom: 1rem;
+}
+
+.movies-container div svg {
+  color: #f7d354;
+}
+
+.movies-container div a {
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem .5rem;
+  background-color: #f7d354;
+  border: 1px solid #f7d354;
+  border-radius: 7px;
+  color: #000;
+  transition: 0.4s;
+  text-align: center;
+  font-weight: bold;
+}
+
+.movies-container div a:hover {
+  background-color: transparent;
+  color: #f7d354;
+}
