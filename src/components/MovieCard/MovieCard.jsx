@@ -5,11 +5,15 @@ import { FaStar } from 'react-icons/fa';
 const imageURL = import.meta.env.VITE_IMG;
 
 const MovieCard = ({ movie, showLink = true }) => {
-  // const [, set] = useState(second);
+  const handleNull = movie.poster_path !== null;
+  const defaultIMG = 'https://w7.pngwing.com/pngs/802/825/png-transparent-redbubble-polite-cat-meme-funny-cat-meme-thumbnail.png';
 
   return (
     <div className="movie-card">
-      <img src={`${imageURL}${movie.poster_path}`} alt={movie.title} />
+      { !handleNull ? (
+        <img src={defaultIMG} alt={movie.title} />
+      ) : (<img src={`${imageURL}${movie.poster_path}`} alt={movie.title} />
+      ) }
       <h2>{movie.title}</h2>
       <p>
         <FaStar />

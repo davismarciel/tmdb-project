@@ -34,7 +34,6 @@ const NavBar = () => {
         <button type="submit">
           <BiSearchAlt2 />
         </button>
-
       </form>
     </nav>
   );
