@@ -6,6 +6,7 @@ import {
   BsWallet2,
   BsHourglassSplit,
   BsFillFileEarmarkTextFill,
+  BsCameraReels,
 } from 'react-icons/bs';
 
 import MovieCard from '../../components/MovieCard/MovieCard';
@@ -45,6 +46,14 @@ const Movie = () => {
         <>
           <MovieCard movie={movie} showLink={false} />
           <p className="tagline">{movie.tagline}</p>
+          <div className="info">
+            <h3>
+              <BsCameraReels />
+              {' '}
+              Genre
+            </h3>
+            <p>{movie.genres[0].name}</p>
+          </div>
           <div className="info">
             <h3>
               <BsWallet2 />
