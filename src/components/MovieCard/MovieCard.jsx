@@ -20,14 +20,16 @@ const MovieCard = ({ movie, showLink = true }) => {
       {!handleNull ? (
         <img src={defaultIMG} alt={movie.title} />
       ) : (
-        <img onClick={handleNavigate} className="img-poster" src={`${imageURL}${movie.poster_path}`} alt={movie.title} />
+        <Link className="movie-detail" to={`/movie/${movie.id}`}>
+          <img src={`${imageURL}${movie.poster_path}`} alt={movie.title} />
+        </Link>
       )}
       <h2>{movie.title}</h2>
       <p>
         <FaStar />
         {movie.vote_average}
       </p>
-      {showLink && <Link to={`/movie/${movie.id}`}>Details</Link>}
+      {showLink && <Link className="details" to={`/movie/${movie.id}`}>Details</Link>}
     </div>
   );
 };

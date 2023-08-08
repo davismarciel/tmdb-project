@@ -24,7 +24,7 @@
   color: #f7d354;
 }
 
-.movies-container div a {
+.movies-container div .details {
   align-items: center;
   cursor: pointer;
   padding: 1rem .5rem;
@@ -37,13 +37,12 @@
   font-weight: bold;
 }
 
-.movies-container div a:hover {
+.movies-container div .details:hover {
   background-color: transparent;
   color: #f7d354;
 }
 
-.img-poster:hover {
-  transition: 0.2s;
-  cursor: pointer;
+.movie-detail:hover {
+  transition: 0.4s;
   opacity: 0.5;
 }
